@@ -4,3 +4,4 @@
 
 ##ToDo list:
 - refactor scripts under bin
+- allow scheduling for multiple jobs.
