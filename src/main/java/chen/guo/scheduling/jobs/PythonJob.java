@@ -11,6 +11,6 @@ public class PythonJob extends ShellJob implements Job {
 
   public void execute(JobExecutionContext context) throws JobExecutionException {
     logger.info("Executing PythonJob");
-    super.execute("/bin/python", context);
+    super.execute("/usr/bin/python", context);
   }
 }

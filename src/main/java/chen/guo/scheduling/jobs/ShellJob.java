@@ -22,7 +22,7 @@ public class ShellJob {
       logger.info("Running " + Arrays.toString(cmdArray));
       int exitCode = Runtime.getRuntime().exec(cmdArray).waitFor();
       if (exitCode != 0) {
-        logger.error("Failed while running " + Arrays.toString(cmdArray));
+        logger.error(String.format("Failed with exit code %d while running %s", exitCode, Arrays.toString(cmdArray)));
       }
     } catch (InterruptedException e) {
       throw new JobExecutionException(e, false);
