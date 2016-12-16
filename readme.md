@@ -1,3 +1,3 @@
 ##ToDo list:
-- add environment variable for this project
+- refactor scripts under bin
 - include bin folder during packaging to make start and stop easy
