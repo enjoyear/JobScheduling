@@ -1,4 +1,4 @@
-package chen.guo.example;
+package chen.guo.scheduling;
 
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
@@ -14,12 +14,10 @@ import org.quartz.impl.StdSchedulerFactory;
 
 public class SimpleScheduler {
 
-  private final String _cronExpression;
   private final org.quartz.Scheduler _scheduler;
 
   public SimpleScheduler(Class<? extends Job> jobClass, String cronExpression, JobDataMap jobDataMap)
       throws SchedulerException {
-    _cronExpression = cronExpression;
     SchedulerFactory sf = new StdSchedulerFactory();
     _scheduler = sf.getScheduler();
 
