@@ -21,7 +21,7 @@ PID="$CHEN_SCHEDULER_DIR/.chen-scheduler-pid"
 
 echo "Start scheduling..."
 command="$JAVA_HOME/bin/java -Xmx2g -Xms1g "
-command+="-jar $1 --job $2"
+command+="-jar $CHEN_SCHEDULER_DIR/target/job-scheduler-1.0-SNAPSHOT-jar-with-dependencies.jar --job $1"
 echo "Running command is:"
 echo "$command"
 nohup $command & echo $! > $PID
