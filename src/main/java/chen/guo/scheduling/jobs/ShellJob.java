@@ -43,7 +43,9 @@ public abstract class ShellJob {
       }
       logger.info("Running " + Arrays.toString(cmdArray));
       int exitCode = Runtime.getRuntime().exec(cmdArray).waitFor();
-      if (exitCode != 0) {
+      if (exitCode == 0) {
+        logger.info("Job finished successfully.");
+      } else {
         logger.error(String.format("Failed with exit code %d while running %s", exitCode, Arrays.toString(cmdArray)));
       }
     } catch (InterruptedException | IOException e) {
